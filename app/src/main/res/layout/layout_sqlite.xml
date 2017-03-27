@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:stretchColumns="1"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView android:text="姓名:"/>
+            <EditText android:id="@+id/editTextName"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="年龄:"/>
+            <EditText android:id="@+id/editTextAge"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="身高:"/>
+            <EditText android:id="@+id/editTextHeight"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <Button android:text="添加数据"/>
+            <Button android:text="全部显示"/>
+            <Button android:text="清除显示"/>
+            <Button android:text="全部删除"/>
+        </TableRow>
+
+        <TableRow>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID:"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <Button android:text="ID删除"/>
+            <Button android:text="ID查询"/>
+            <Button android:text="ID更新"/>
+        </TableRow>
+
+    </TableLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hello1</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="res_format_string">format_string</string>
+    <string name="res_integer_array">integer array</string>
+    <string name="fmtstring">Hello %2$s ha ha. %1$s again</string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="intArr">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+    <string-array name="strArr">
+        <item>str1</item>
+        <item>str2</item>
+    </string-array>
+    <array name="icons">
+        <item>@drawable/a</item>
+    </array>
+    <array name="colors">
+        <item>#FFFF0000</item>
+        <item>#FF00FF00</item>
+        <item>#FF0000FF</item>
+    </array>
+    <string-array name="prodArr">
+        <item>proc1</item>
+        <item>proc2</item>
+        <item>proc3</item>
+        <item>proc4</item>
+        <item>proc5</item>
+        <item>proc6</item>
+        <item>proc7</item>
+        <item>proc8</item>
+        <item>proc9</item>
+        <item>proc10</item>
+        <item>proc11</item>
+        <item>proc12</item>
+        <item>proc13</item>
+        <item>proc14</item>
+        <item>proc15</item>
+    </string-array>
+
+    <string-array name="catArr">
+        <item>cat1</item>
+        <item>cat2</item>
+        <item>cat1</item>
+        <item>cat2</item>
+        <item>cat5</item>
+        <item>cat3</item>
+        <item>cat5</item>
+        <item>cat3</item>
+        <item>cat1</item>
+        <item>cat1</item>
+        <item>cat1</item>
+        <item>cat2</item>
+        <item>cat3</item>
+        <item>cat4</item>
+        <item>cat5</item>
+    </string-array>
+    <array name="prodImg">
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/sample_thumb_2</item>
+    </array>
+</resources>
