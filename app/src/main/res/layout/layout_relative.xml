@@ -3,17 +3,31 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
   <TextView
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="text1"
+      android:text="用户"
       android:id="@+id/textRela1"
-      android:layout_alignParentBottom="true"
-      android:layout_marginBottom="100dp"
       />
-  <TextView
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/edittextreal"
+      android:layout_below="@id/textRela1"
+      />
+  <Button
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="text2"
-      android:layout_above="@id/textRela1"
+      android:text="取消"
+      android:layout_alignParentRight="true"
+      android:layout_below="@id/edittextreal"
+      android:id="@+id/buttonCancelRela"
       />
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="确定"
+      android:layout_alignTop="@id/buttonCancelRela"
+      android:layout_toLeftOf="@id/buttonCancelRela"
+      />
+
 </RelativeLayout>

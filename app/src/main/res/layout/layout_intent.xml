@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_intent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.eric.hello1.IntentActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="subActivity1"
+        android:layout_alignParentTop="true"
+        android:id="@+id/buttonIntent1"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="subActivity2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/buttonIntent1"
+        android:id="@+id/buttonIntent2"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkbox"
+        android:id="@+id/buttonIntent3"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/buttonIntent2"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="intentFilter"
+        android:id="@+id/buttonIntent4"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/buttonIntent3"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sendBroadcase"
+        android:id="@+id/buttonIntent5"
+        android:layout_toRightOf="@id/buttonIntent4"
+        android:layout_below="@id/buttonIntent3"
+        />
+
+</RelativeLayout>

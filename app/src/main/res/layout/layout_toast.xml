@@ -5,6 +5,21 @@
     android:orientation="vertical">
 
     <Button
+        android:text="query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonToastQuery" />
+    <Button
+        android:text="update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonToastUpdate" />
+    <Button
+        android:text="del"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonToastDel" />
+    <Button
         android:text="@string/confirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

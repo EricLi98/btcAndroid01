@@ -3,6 +3,9 @@
     package="com.example.eric.hello1">
 
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -24,20 +27,65 @@
         <activity android:name=".AlertDialogActivity" />
         <activity android:name=".ResourceActivity" />
         <activity android:name=".UiActivity" />
+        <activity android:name=".CameraActivity"></activity>
         <activity android:name=".ListViewPracActivity" />
         <activity android:name=".ListViewSimActivity" />
         <activity android:name=".FramelayoutActivity" />
-        <activity android:name=".TableLayoutActivity"></activity>
-        <activity android:name=".RelativelayoutActivity">
-
-        </activity>
-        <activity android:name=".SqliteActivity">
+        <activity android:name=".TableLayoutActivity" />
+        <activity android:name=".RelativelayoutActivity" />
+        <activity android:name=".SqliteActivity" />
+        <activity android:name=".CalculatorActivity" />
+        <activity android:name=".LifecycleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.inspur"
+                    android:scheme="schemodemo" />
+
+
+
+            </intent-filter>
+
         </activity>
+        <activity android:name=".IntentActivity" />
+        <activity android:name=".IntentActivity1" />
+        <activity android:name=".SharedPreferenceActivity" />
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.inspur.receiver" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".FileActivity" />
+        <activity android:name=".ServiceActivity"></activity>
+        <activity android:name=".TelSmsActivity" android:configChanges="orientation|screenSize">
+
+        </activity>
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.inspur.edu"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".LiveCameraActivity"></activity>
     </application>
 
 </manifest>

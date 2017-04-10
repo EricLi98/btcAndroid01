@@ -22,6 +22,12 @@ public class UiActivity extends AppCompatActivity {
     private List<String> lst;
     private List<HashMap<String ,String>> list1;
     private ArrayAdapter<String> adapterLst;
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +74,7 @@ public class UiActivity extends AppCompatActivity {
             }
 
     });
-        sp.setSelection(2);
+        //sp.setSelection(2);
         ListView lv=(ListView)findViewById(R.id.listViewUi);
         adapterLst=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,lst);
         lv.setAdapter(adapterLst);

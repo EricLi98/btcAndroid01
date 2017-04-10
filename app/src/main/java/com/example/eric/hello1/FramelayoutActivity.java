@@ -45,4 +45,6 @@ public class FramelayoutActivity extends AppCompatActivity {
         setContentView(framelayout);
     }
 
+
+
 }

@@ -24,10 +24,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TableRow>
-            <Button android:text="添加数据"/>
-            <Button android:text="全部显示"/>
-            <Button android:text="清除显示"/>
-            <Button android:text="全部删除"/>
+            <Button android:text="添加数据"
+                android:id="@+id/buttonInsert"
+                />
+            <Button android:text="全部显示"
+                android:id="@+id/buttonDispAll"
+                />
+            <Button android:text="清除显示"
+                android:id="@+id/buttonClear"
+                />
+            <Button android:text="全部删除"
+                android:id="@+id/buttonDelAll"
+                />
         </TableRow>
 
         <TableRow>
@@ -39,15 +47,23 @@
                     />
                 <EditText
                     android:layout_width="match_parent"
+                    android:id="@+id/editTextId"
                     android:layout_height="wrap_content" />
             </LinearLayout>
-            <Button android:text="ID删除"/>
-            <Button android:text="ID查询"/>
-            <Button android:text="ID更新"/>
+            <Button android:text="ID删除"
+                android:id="@+id/buttonDelId"
+                />
+            <Button android:text="ID查询"
+                android:id="@+id/buttonQueryId"
+                />
+            <Button android:text="ID更新"
+                android:id="@+id/buttonUpdateId"
+                />
         </TableRow>
 
     </TableLayout>
     <ListView
         android:layout_width="match_parent"
+        android:id="@+id/listViewStud"
         android:layout_height="match_parent"></ListView>
 </LinearLayout>

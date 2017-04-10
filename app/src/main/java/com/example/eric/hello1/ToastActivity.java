@@ -21,6 +21,14 @@ public class ToastActivity extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+               Student student=new Student();
+                student.setAge(20);
+                student.setHeight(177);
+                student.setName("xm");
+                StudentService1 studentService1=new StudentService1(ToastActivity.this);
+                studentService1.save(student);
+            }
+            public void onClick1(View v) {
                 Toast tt=new Toast(ToastActivity.this.getApplicationContext());
                 LayoutInflater inflater = getLayoutInflater();
                 View layout = inflater.inflate(R.layout.layout_toast_cust,
@@ -36,6 +44,48 @@ public class ToastActivity extends AppCompatActivity {
                 toast.setDuration(Toast.LENGTH_LONG);
                 toast.setView(layout);
                 toast.show();
+            }
+        });
+        bt=(Button)findViewById(R.id.buttonToastQuery);
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StudentService1 studentService1=new StudentService1(ToastActivity.this);
+                Student student=studentService1.find("1");
+                if(student==null){
+                    Toast.makeText(ToastActivity.this,"no data",Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(ToastActivity.this,student.toString(),Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        bt=(Button)findViewById(R.id.buttonToastDel);
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StudentService1 studentService1=new StudentService1(ToastActivity.this);
+                studentService1.del("4");
+
+                Toast.makeText(ToastActivity.this,"del",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        bt=(Button)findViewById(R.id.buttonToastUpdate);
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Student student=new Student();
+                student.setAge(21);
+                student.setId(5);
+                student.setHeight(178);
+                student.setName("tom");
+                StudentService1 studentService1=new StudentService1(ToastActivity.this);
+                studentService1.update(student);
+
+                Toast.makeText(ToastActivity.this,"update",Toast.LENGTH_SHORT).show();
+
             }
         });
     }
