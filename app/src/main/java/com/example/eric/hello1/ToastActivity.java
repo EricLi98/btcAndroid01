@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,8 +18,8 @@ public class ToastActivity extends AppCompatActivity {
         setContentView(R.layout.layout_toast);
         bt=(Button) findViewById(R.id.buttonToast1);
         bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+
+            public void onClick2(View v) {
                Student student=new Student();
                 student.setAge(20);
                 student.setHeight(177);
@@ -28,11 +27,11 @@ public class ToastActivity extends AppCompatActivity {
                 StudentService1 studentService1=new StudentService1(ToastActivity.this);
                 studentService1.save(student);
             }
-            public void onClick1(View v) {
+            public void onClick(View v) {
                 Toast tt=new Toast(ToastActivity.this.getApplicationContext());
                 LayoutInflater inflater = getLayoutInflater();
-                View layout = inflater.inflate(R.layout.layout_toast_cust,
-                        (ViewGroup) findViewById(R.id.toast_layout_root));
+                //ViewGroup vg=(ViewGroup) findViewById(R.id.toast_layout_root);
+                View layout = inflater.inflate(R.layout.layout_toast_cust,null   );
 
                 ImageView image = (ImageView) layout.findViewById(R.id.imageToastCust);
                 image.setImageResource(R.drawable.a);
