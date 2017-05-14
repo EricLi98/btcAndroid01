@@ -67,7 +67,8 @@ public class NotificationActivity extends AppCompatActivity {
         Notification.Builder notifBuilder = new Notification.Builder(this);
         //设置属性
         notifBuilder.setContentTitle("notify tile");
-        notifBuilder.setSmallIcon(R.drawable.stat_sample);
+        notifBuilder.setSmallIcon(android.R.drawable.ic_input_add);//(R.drawable.stat_sample);
+
         notifBuilder.setWhen(System.currentTimeMillis());
         notifBuilder.setContentText("notify content");
         notifBuilder.setDefaults(Notification.DEFAULT_ALL);

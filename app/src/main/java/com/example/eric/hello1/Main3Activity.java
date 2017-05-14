@@ -25,7 +25,7 @@ public class Main3Activity extends AppCompatActivity {
             public void onClick(View v) {
                 int op1=Integer.parseInt(et1.getText().toString());
                 int op2=Integer.parseInt(et2.getText().toString());
-                int rst=op1*op2;
+                int rst=op1+op2;
                 etRst.setText(""+rst);
             }
         });

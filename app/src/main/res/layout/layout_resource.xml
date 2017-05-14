@@ -27,6 +27,11 @@
         android:text="shape"
 
         />
+    <EditText
+        android:layout_width="match_parent"
+        style="@style/CustomText"
+        android:text="ABCD"
+        android:layout_height="wrap_content" />
     <Button
         android:text="XML"
         android:layout_width="match_parent"

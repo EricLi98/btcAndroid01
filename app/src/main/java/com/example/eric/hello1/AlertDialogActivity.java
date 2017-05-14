@@ -24,6 +24,7 @@ public class AlertDialogActivity extends AppCompatActivity implements AlertDialo
                 ab.setMessage("message");
                 ab.setPositiveButton("确定",AlertDialogActivity.this);
                 ab.setNegativeButton("取消",AlertDialogActivity.this);
+
                 ab.show();
             }
         });

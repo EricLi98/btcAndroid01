@@ -28,7 +28,6 @@ public class ToastActivity extends AppCompatActivity {
                 studentService1.save(student);
             }
             public void onClick(View v) {
-                Toast tt=new Toast(ToastActivity.this.getApplicationContext());
                 LayoutInflater inflater = getLayoutInflater();
                 //ViewGroup vg=(ViewGroup) findViewById(R.id.toast_layout_root);
                 View layout = inflater.inflate(R.layout.layout_toast_cust,null   );
