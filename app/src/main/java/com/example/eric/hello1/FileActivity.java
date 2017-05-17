@@ -127,7 +127,7 @@ public class FileActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_pref, menu);
+        inflater.inflate(R.menu.amenu, menu);
         return true;
     }
 

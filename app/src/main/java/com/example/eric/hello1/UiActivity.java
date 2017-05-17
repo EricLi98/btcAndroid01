@@ -22,6 +22,10 @@ public class UiActivity extends AppCompatActivity {
     private List<String> lst;
     private List<HashMap<String ,String>> list1;
     private ArrayAdapter<String> adapterLst;
+    private Spinner spinner;
+
+    String[] countryNames={"India","China","Australia","Portugle","America","New Zealand"};
+    int flags[] = {R.drawable.india, R.drawable.china, R.drawable.australia, R.drawable.portugle, R.drawable.america, R.drawable.new_zealand};
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -39,6 +43,8 @@ public class UiActivity extends AppCompatActivity {
                 Toast.makeText(UiActivity.this,"imgbutton",Toast.LENGTH_LONG).show();
                 UiActivity.this.lst.add("item4");
                 UiActivity.this.adapterLst.notifyDataSetChanged();
+
+
             }
         });
         ToggleButton tg=(ToggleButton)findViewById(R.id.toggleButtonUi);
@@ -53,12 +59,14 @@ public class UiActivity extends AppCompatActivity {
             }
         });
         Spinner sp=(Spinner)findViewById(R.id.spinnerUi);
+        this.spinner=sp;
         lst=new ArrayList<String>();
         lst.add("item1");
         lst.add("item2");
         lst.add("item3");
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,lst);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.dropdownlist);
+        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp.setAdapter(adapter);
 
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -74,7 +82,11 @@ public class UiActivity extends AppCompatActivity {
             }
 
     });
-        //sp.setSelection(2);
+        Spinner spin = (Spinner) findViewById(R.id.spinnerUiCustAdaptor);
+        CustomAdapter customAdapter=new CustomAdapter(getApplicationContext(),flags,countryNames);
+        spin.setAdapter(customAdapter);
+
+
         ListView lv=(ListView)findViewById(R.id.listViewUi);
         adapterLst=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,lst);
         lv.setAdapter(adapterLst);
