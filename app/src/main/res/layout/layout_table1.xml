@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"  >
+    android:layout_width="match_parent" android:layout_height="match_parent"  android:stretchColumns="0">
     <TableRow>
-        <TextView android:text="column1" android:background="@android:color/holo_blue_bright"/>
-        <TextView android:text="comlumn2" android:background="@android:color/holo_red_dark" android:layout_width="match_parent"/>
+        <TextView android:layout_column="1" android:text="column1"  android:background="@android:color/holo_blue_bright" android:layout_width="match_parent"/>
+        <TextView android:text="comlumn2"  android:background="@android:color/holo_red_dark" android:layout_width="match_parent"/>
     </TableRow>
 
     <TableRow>
-        <TextView android:text="column1" android:background="@android:color/holo_blue_bright"/>
+        <TextView android:text="column1" android:background="@android:color/holo_blue_bright" android:layout_width="match_parent"/>
         <TextView android:text="comlumn2" android:background="@android:color/holo_red_dark" android:layout_width="match_parent"/>
     </TableRow>
 </TableLayout>
