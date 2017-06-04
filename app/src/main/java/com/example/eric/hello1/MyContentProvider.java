@@ -101,10 +101,10 @@ public class MyContentProvider extends ContentProvider {
        switch (uriMatcher.match(uri)){
 
            case SINGLE_STUDENT:
-               if(selection.length()>0){
+               if(selection!=null && selection.length()>0){
                    selection+=" and id="+uri.getPathSegments().get(1);
                }else {
-                   selection+=" id="+uri.getPathSegments().get(1);
+                   selection=" id="+uri.getPathSegments().get(1);
                }
                break;
        }
