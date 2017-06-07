@@ -2,6 +2,7 @@ package com.example.eric.hello1;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -90,12 +91,13 @@ public class FileActivity extends AppCompatActivity {
 
             }
         });
+        /*
         bt = (Button) findViewById(R.id.buttonFileWriteSd);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String fileName = "SdcardFile-" + System.currentTimeMillis() + ".txt";
-                File dir = new File("/sdcard/");
+                File dir = new File(Environment.getExternalStorageDirectory(),fileName);
                 if (dir.exists() && dir.canWrite()) {
                     File newFile = new File(dir.getAbsolutePath() + "/" + fileName);
                     FileOutputStream fos = null;
@@ -122,6 +124,7 @@ public class FileActivity extends AppCompatActivity {
 
             }
         });
+        */
     }
 
     @Override
@@ -129,6 +132,32 @@ public class FileActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.amenu, menu);
         return true;
+    }
+    public void writeSd(View v){
+        String fileName = "SdcardFile-" + System.currentTimeMillis() + ".txt";
+        File file = new File(Environment.getExternalStorageDirectory(),fileName);
+        FileOutputStream fos = null;
+        try {
+            file.createNewFile();
+
+            if (file.exists() && file.canWrite()) {
+                fos = new FileOutputStream(file);
+                fos.write(entryText.getText().toString().getBytes());
+                labelView.setText(fileName + "文件写入SD卡");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fos != null) {
+                try {
+                    fos.flush();
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
     @Override
