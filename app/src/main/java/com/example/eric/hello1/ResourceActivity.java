@@ -2,6 +2,7 @@ package com.example.eric.hello1;
 
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -67,7 +68,7 @@ public class ResourceActivity extends AppCompatActivity {
     }
     ArrayList<String> parseXml() throws Exception{
         ArrayList<String> items=new ArrayList<String>();
-        XmlPullParser xpp=getResources().getXml(R.xml.words);
+        XmlResourceParser xpp=getResources().getXml(R.xml.words);
 
         while (xpp.getEventType()!=XmlPullParser.END_DOCUMENT) {
             if (xpp.getEventType()==XmlPullParser.START_TAG) {

@@ -1,8 +1,12 @@
 package com.example.eric.hello1;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -134,6 +138,62 @@ public class FileActivity extends AppCompatActivity {
         return true;
     }
     public void writeSd(View v){
+        if(ActivityCompat.checkSelfPermission(this,Manifest.permission.WRITE_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED){
+            writeSd();
+        }else{
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},102);
+        }
+    }
+
+    public void readSd(View v){
+        if(ActivityCompat.checkSelfPermission(this,Manifest.permission.READ_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED){
+            readSd();
+        }else{
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},103);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode==102){
+            if(grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                writeSd();
+            }
+        }
+        if(requestCode==103){
+            if(grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                readSd();
+            }
+        }
+    }
+    private void readSd(){
+        String fileName = "SdcardFile-1574867125623"  + ".txt";
+        File file = new File(Environment.getExternalStorageDirectory(),fileName);
+
+        FileInputStream fis = null;
+        try {
+            if(file.exists()){
+                fis=new FileInputStream(file);
+                byte[] bytes=new byte[fis.available()];
+                fis.read(bytes,0,bytes.length);
+                Toast.makeText(this,new String(bytes),Toast.LENGTH_SHORT).show();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fis != null) {
+                try {
+
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    private void writeSd(){
+
         String fileName = "SdcardFile-" + System.currentTimeMillis() + ".txt";
         File file = new File(Environment.getExternalStorageDirectory(),fileName);
         FileOutputStream fos = null;

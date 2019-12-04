@@ -183,7 +183,7 @@ public class TelSmsActivity extends AppCompatActivity {
         }
         if(requestCode==1001){
             if(grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_GRANTED){
-                this.sendSms(this.callText,this.smsContent);
+                this.sendSmsBak(this.callText,this.smsContent);
             }
         }
         if(requestCode==1003){

@@ -18,55 +18,55 @@
         <item>#FF0000FF</item>
     </array>
     <string-array name="prodArr">
-        <item>proc1</item>
-        <item>proc2</item>
-        <item>proc3</item>
-        <item>proc4</item>
-        <item>proc5</item>
-        <item>proc6</item>
-        <item>proc7</item>
-        <item>proc8</item>
-        <item>proc9</item>
-        <item>proc10</item>
-        <item>proc11</item>
-        <item>proc12</item>
-        <item>proc13</item>
-        <item>proc14</item>
-        <item>proc15</item>
+        <item>可口可乐CocaCola</item>
+        <item>皮制箱leatherBox</item>
+        <item>统一泡面instantnoodles </item>
+        <item>Tcl电视</item>
+        <item>金士顿U盘</item>
+        <item>中国简史brief history of China </item>
+        <item>朗科U盘Netac</item>
+        <item>海尔空调air conditioner</item>
+        <item>张裕红酒 red wine</item>
+        <item>MP3播放器</item>
+        <item>吸类器suction trap</item>
+        <item>油烟机 lampblack machine</item>
+        <item>口香糖Chewing gum</item>
+        <item>唐诗三百首three hundred poems of Tang Dynasty</item>
+        <item>拉杆箱pull rod box</item>
     </string-array>
 
     <string-array name="catArr">
-        <item>cat1</item>
-        <item>cat2</item>
-        <item>cat1</item>
-        <item>cat2</item>
-        <item>cat5</item>
-        <item>cat3</item>
-        <item>cat5</item>
-        <item>cat3</item>
-        <item>cat1</item>
-        <item>cat1</item>
-        <item>cat1</item>
-        <item>cat2</item>
-        <item>cat3</item>
-        <item>cat4</item>
-        <item>cat5</item>
+        <item>食品</item>
+        <item>箱包</item>
+        <item>食品</item>
+        <item>家电</item>
+        <item>数码</item>
+        <item>图书</item>
+        <item>数码</item>
+        <item>家电</item>
+        <item>食品</item>
+        <item>数码</item>
+        <item>家电</item>
+        <item>家电</item>
+        <item>食品</item>
+        <item>图书</item>
+        <item>箱包</item>
     </string-array>
     <array name="prodImg">
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
-        <item>@drawable/sample_thumb_2</item>
+        <item>@drawable/america</item>
+        <item>@drawable/australia</item>
+        <item>@drawable/portugle</item>
+        <item>@drawable/portugle</item>
+        <item>@drawable/new_zealand</item>
+        <item>@drawable/america</item>
+        <item>@drawable/australia</item>
+        <item>@drawable/america</item>
+        <item>@drawable/australia</item>
+        <item>@drawable/america</item>
+        <item>@drawable/new_zealand</item>
+        <item>@drawable/new_zealand</item>
+        <item>@drawable/portugle</item>
+        <item>@drawable/portugle</item>
+        <item>@drawable/america</item>
     </array>
 </resources>

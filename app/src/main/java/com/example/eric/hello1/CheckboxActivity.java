@@ -38,6 +38,7 @@ public class CheckboxActivity extends AppCompatActivity implements CompoundButto
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+
         String seled=",";
         for(int i=0;i<myBoxes.size();i++){
             CheckBox cb=(CheckBox)myBoxes.get(i);

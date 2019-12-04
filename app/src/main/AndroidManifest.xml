@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -14,26 +16,40 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".Main3Activity" />
+        <activity android:name=".Main3Activity" >
+
+            </activity>
         <activity android:name=".FocusActivity" />
         <activity android:name=".TouchActivity" />
         <activity android:name=".RadiogrpActivity" />
         <activity android:name=".Lis1Activity" />
         <activity android:name=".KeyeventActivity" />
-        <activity android:name=".CheckboxActivity" />
+        <activity android:name=".CheckboxActivity" >
+
+            </activity>
         <activity android:name=".ToastActivity" />
-        <activity android:name=".NotificationActivity" />
+        <activity android:name=".NotificationActivity" >
+
+            </activity>
         <activity android:name=".IncomingMessageView" />
         <activity android:name=".AlertDialogActivity" />
         <activity android:name=".ResourceActivity" />
         <activity android:name=".UiActivity" />
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".ListViewPracActivity" />
-        <activity android:name=".ListViewSimActivity" />
+        <activity android:name=".CameraActivity" >
+
+            </activity>
+        <activity android:name=".ListViewPracActivity" >
+
+            </activity>
+        <activity android:name=".ListViewSimActivity" >
+
+        </activity>
         <activity android:name=".FramelayoutActivity" />
         <activity android:name=".TableLayoutActivity" />
         <activity android:name=".RelativelayoutActivity" />
-        <activity android:name=".SqliteActivity" />
+        <activity android:name=".SqliteActivity" >
+
+            </activity>
         <activity android:name=".CalculatorActivity">
 
         </activity>
@@ -50,7 +66,9 @@
         </activity>
         <activity android:name=".IntentActivity" />
         <activity android:name=".IntentActivity1" />
-        <activity android:name=".SharedPreferenceActivity" />
+        <activity android:name=".SharedPreferenceActivity" >
+
+            </activity>
 
         <receiver
             android:name=".MyReceiver"
@@ -61,11 +79,20 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".FileActivity" />
+        <activity android:name=".FileActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            </activity>
         <activity android:name=".ServiceActivity" />
         <activity
             android:name=".TelSmsActivity"
-            android:configChanges="orientation|screenSize" />
+
+            android:configChanges="orientation|screenSize" >
+
+            </activity>
 
         <service
             android:name=".MyService"
@@ -87,11 +114,7 @@
             android:exported="true" />
 
         <activity android:name=".BinderServiceAcitvity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

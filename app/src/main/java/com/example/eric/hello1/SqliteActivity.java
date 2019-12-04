@@ -127,7 +127,7 @@ public class SqliteActivity extends AppCompatActivity implements View.OnClickLis
         student.setName(xm.getText().toString());
         student.setHeight(Integer.parseInt(height.getText().toString()));
         student.setAge(Integer.parseInt(age.getText().toString()));
-        StudService studService=new StudService(this);
+        StudService studService=new StudService(this);//DAO
         studService.save(student);
     }
 }

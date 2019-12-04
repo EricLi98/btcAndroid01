@@ -29,7 +29,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="写入SD文件"
+        android:onClick="writeSd"
         android:id="@+id/buttonFileWriteSd"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="读取SD文件"
+        android:onClick="readSd"
         />
     <CheckBox
         android:layout_width="wrap_content"
